@@ -1,9 +1,11 @@
 const http = require('http');
 
 function processRecipeUrl(body) {
-    if (body && body.url) {
-        console.log(body.url);
-        return body.url;
+    let bodyObject = JSON.parse(body);
+    let url = bodyObject.url;
+    if (bodyObject && url) {
+        console.log(url);
+        return url;
     } else {
         return "Could not process recipe: URL not found."
     }
@@ -31,7 +33,7 @@ const server = http.createServer(function (request, response) {
         request.on('end', () => {
             let url = processRecipeUrl(body);
             console.log('>> URL:' + url + ' <<');
-
+            
             response.writeHead(200, {
                 'Content-Type': 'application/json'
             })

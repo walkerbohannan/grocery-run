@@ -1,4 +1,5 @@
 const http = require('http');
+const fetch = require('node-fetch');
 
 function processRecipeUrl(body) {
     let bodyObject = JSON.parse(body);
@@ -9,6 +10,11 @@ function processRecipeUrl(body) {
     } else {
         return "Could not process recipe: URL not found."
     }
+}
+
+async function getRecipeContent(url) {
+    const response = await fetch(url);
+    return await response.text();
 }
 
 const server = http.createServer(function (request, response) {
@@ -33,12 +39,14 @@ const server = http.createServer(function (request, response) {
         request.on('end', () => {
             let url = processRecipeUrl(body);
             console.log('>> URL:' + url + ' <<');
-            
-            response.writeHead(200, {
-                'Content-Type': 'application/json'
+
+            getRecipeContent(url).then(content => {
+                response.writeHead(200, {
+                    'Content-Type': 'application/text'
+                })
+                response.write(content);
+                response.end();
             })
-            response.write('OK, got it.');
-            response.end();
         });
 
 

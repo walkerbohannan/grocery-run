@@ -1,4 +1,4 @@
-import bag from './bag.svg';
+import bag from '../bag.svg';
 import React from 'react';
 import './Parser.css';
 
@@ -12,7 +12,8 @@ class Parser extends React.Component {
                 title: '',
                 url: '',
                 ingredients: []
-            }]
+            }],
+            errorMessage: ''
         }
         this.handleChange = this.handleChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -39,6 +40,9 @@ class Parser extends React.Component {
             })
             .catch(error => {
                 console.error("Error parsing data: " + error);
+                if (error.status === 500) {
+                    this.setState({errorMessage: "Server unavailable."})
+                }
             })
     }
 
@@ -59,17 +63,23 @@ class Parser extends React.Component {
                         onClick={this.onSubmit}>
                         Fetch Recipe
                     </button>
+                    {this.state.errorMessage? (<div className="errorMessage">{this.state.errorMessage}</div>) : (<div></div>)}
+
                     <div className={"GroceryList"}>
                         <h3>Recipes</h3>
                         {this.state.recipes.map((recipe, recipeIndex) => (
-                            <div>
                             <a href={recipe.url} key={"recipe"-recipeIndex}>{recipe.title}</a>
-                            <h3>Groceries</h3>
+                        ))}
+                        <h3>Groceries</h3>
+                            <div>
                                 {recipe.ingredients.map((ingredient, ingredientIndex) => (
-                                    <ul key={"ingredient"-ingredientIndex}>
-                                        <input type="checkbox" id={ingredientIndex} name={ingredientIndex} value={ingredient}/>
-                                        <label htmlFor={ingredientIndex}>{ingredient}</label>
-                                    </ul>
+                                    <div>
+
+                                        <ul key={"ingredient"-ingredientIndex}>
+                                            <input type="checkbox" id={ingredientIndex} name={ingredientIndex} value={ingredient}/>
+                                            <label htmlFor={ingredientIndex}>{ingredient}</label>
+                                        </ul>
+                                    </div>
                                 ))}
                             </div>
                         ))}

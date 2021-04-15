@@ -7,15 +7,15 @@ export default function RecipeGroceriesDisplay(props) {
             <div className={"GroceryList"}>
                 <h3>Recipes</h3>
                 {props.recipes.map((recipe, recipeIndex) => (
-                    <ul key={"recipe"-recipeIndex}>
-                        <a href={recipe.url} key={"recipe"-recipeIndex}>{recipe.title}</a>
+                    <ul key={recipeIndex}>
+                        <a href={recipe.url}>{recipe.title}</a>
                     </ul>
                 ))}
                 <h3>Groceries</h3>
                 {props.recipes.map((recipe, recipeIndex) => (
-                    <div>
+                    <div key={recipeIndex}>
                         {recipe.ingredients.map((ingredient, ingredientIndex) => (
-                            <ul key={"ingredient"-ingredientIndex}>
+                            <ul key={ingredientIndex}>
                                 <input type="checkbox" id={ingredientIndex} name={ingredientIndex} value={ingredient}/>
                                 <label htmlFor={ingredientIndex}>{ingredient}</label>
                             </ul>

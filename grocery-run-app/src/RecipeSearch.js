@@ -1,5 +1,4 @@
 import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
 import RecipeGroceriesDisplay from "./RecipeGroceriesDisplay"
 
 import "./RecipeSearch.css";
@@ -21,13 +20,9 @@ export default class RecipeSearch extends PureComponent {
         this.onSubmit = this.onSubmit.bind(this);
     }
 
-    static propTypes = {
-        textChange: PropTypes.func
-    };
-
-    handleChange = event => {
-        this.props.textChange(event);
-    };
+    handleChange(e) {
+        this.setState({ url: e.target.value });
+    }
 
     onSubmit = () => {
         let data = {

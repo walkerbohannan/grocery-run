@@ -20,6 +20,75 @@ async function getRecipeContent(url) {
     return await response.text();
 }
 
+function findHalfBakedHarvestIngredients($) {
+    let wprmRecipeIngredients = $('.wprm-recipe-ingredients');
+    let ingredients = [];
+    for (let i = 0; i < wprmRecipeIngredients.length; i++) {
+        let recipeIngredientsChildren = wprmRecipeIngredients[i].children;
+        for (let j = 0; j < recipeIngredientsChildren.length; j++) {
+            let recipeIngredientsChild = recipeIngredientsChildren[j];
+            if (recipeIngredientsChild.type === "tag") {
+                let ingredient = '';
+                for (let k = 0; k < recipeIngredientsChild.children.length; k++) {
+                    let child = recipeIngredientsChild.children[k];
+                    if (child.type === "tag") {
+                        let firstChild = child.children[0];
+                        if (child.attribs.class === "wprm-recipe-ingredient-amount") {
+                            ingredient += firstChild.data + " "
+                        } else if (child.attribs.class === "wprm-recipe-ingredient-unit") {
+                            ingredient += firstChild.data + " "
+                        } else if (child.attribs.class === "wprm-recipe-ingredient-name") {
+                            if (firstChild.type === "tag" && firstChild.name === "a") {
+                                ingredient += firstChild.children[0].data;
+                            } else {
+                                ingredient += firstChild.data + ""
+                            }
+                        }
+                    }
+                }
+                ingredients.push(ingredient);
+            }
+        }
+    }
+    return ingredients;
+}
+
+function findAllRecipesIngredients($) {
+    let ingredients = $('.ingredients-item-name');
+    let recipeIngredients = [];
+    for (let index = 0; index < ingredients.length; index++) {
+        recipeIngredients.push(ingredients[index].children[0].data);
+    }
+    return recipeIngredients;
+}
+
+function findSmittenKitchenIngredients($) {
+    let ingredients = $('.ingredient');
+    let recipeIngredients = [];
+    for (let index = 0; index < ingredients.length; index++) {
+        recipeIngredients.push(ingredients[index].children[0].data);
+    }
+    return recipeIngredients;
+}
+
+function constructRecipeIngredients(content, url) {
+    let $ = cheerio.load(content);
+    let ingredients = findSmittenKitchenIngredients($);
+    if (ingredients.length === 0) {
+        ingredients = findAllRecipesIngredients($)
+    }
+
+    if (ingredients.length === 0) {
+        ingredients = findHalfBakedHarvestIngredients($);
+    }
+
+    let recipe = {};
+    recipe.title = $('title')[0].children[0].data;
+    recipe.url = url;
+    recipe.ingredients = ingredients;
+    return recipe;
+}
+
 const server = http.createServer(function (request, response) {
     if (request.url === '/') {
         response.writeHead(200, {
@@ -56,22 +125,17 @@ const server = http.createServer(function (request, response) {
                         'Content-Type': 'application/json',
                         'Access-Control-Allow-Origin': '*'
                     })
-                    let $ = cheerio.load(content);
-                    let ingredients = $('.ingredient');
-                    if (ingredients.length === 0) {
-                        ingredients = $('.ingredients-item-name')
-                    }
-                    let recipe = {};
-                    recipe.title = $('title')[0].children[0].data;
-                    recipe.url = url;
-                    recipe.ingredients = [];
-                    for (let index = 0; index < ingredients.length; index++) {
-                        recipe.ingredients.push(ingredients[index].children[0].data);
-                    }
+                    let recipe = constructRecipeIngredients(content, url);
+
                     console.log(recipe)
                     response.write(JSON.stringify(recipe));
                     response.end();
-                })
+                }).catch(error => {
+                        response.writeHead(500);
+                        response.write("Server Error");
+                        console.error(error);
+                        response.end();
+                    })
             });
 
         }

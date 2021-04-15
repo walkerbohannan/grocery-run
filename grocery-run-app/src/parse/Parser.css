@@ -20,10 +20,20 @@
 
 .text-area-input {
     width: 500px;
-    height: 20px;
+    height: 40px;
 }
 
 .text-area-output {
     width: 500px;
     height: 200px;
+}
+
+.GroceryList {
+    text-align: left;
+    font-size: calc(10px + 1vmin);
+    color: white;
+}
+
+a {
+    color: white;
 }

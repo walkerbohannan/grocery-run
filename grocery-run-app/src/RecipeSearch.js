@@ -1,5 +1,6 @@
 import React, { PureComponent } from "react";
 import RecipeGroceriesDisplay from "./RecipeGroceriesDisplay"
+import StatusMessage from "./StatusMessage"
 
 import "./RecipeSearch.css";
 
@@ -14,7 +15,8 @@ export default class RecipeSearch extends PureComponent {
                 url: '',
                 ingredients: []
             }],
-            errorMessage: ''
+            statusMessage: '',
+            statusType: 'error'
         }
         this.handleChange = this.handleChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -28,6 +30,9 @@ export default class RecipeSearch extends PureComponent {
         let data = {
             "url": this.state.url
         }
+        this.setState({
+            statusMessage: 'Parsing out ingredients...'
+        })
         fetch(this.state.proxyServer, {
             method: 'POST',
             headers: {
@@ -36,17 +41,27 @@ export default class RecipeSearch extends PureComponent {
             body: JSON.stringify(data)
         }).then(response => response.json())
             .then(data => {
-                console.log("Raw text: " + data);
                 this.setState(state => {
+                    if (data.ingredients.length === 0) {
+                        this.setState({
+                            statusMessage: "Couldn't parse out ingredients from that link. Maybe bribe the devs to add that website? =)",
+                            statusType: 'warn'
+                        })
+                    } else {
+                        this.setState({
+                            statusMessage: ''
+                        })
+                    }
                     const recipes = state.recipes.concat(data);
                     return {recipes}
                 })
             })
             .catch(error => {
-                console.error("Error parsing data: " + error);
-                if (error.status === 500) {
-                    this.setState({errorMessage: "Server unavailable."})
-                }
+                console.error("Error parsing data.");
+                this.setState({
+                    statusMessage: "Couldn't get your ingredients: server unavailable.",
+                    statusType: 'error'
+                })
             })
     }
 
@@ -64,6 +79,7 @@ export default class RecipeSearch extends PureComponent {
                     onClick={this.onSubmit}>
                     Fetch Recipe
                 </button>
+                <StatusMessage statusMessage={this.state.statusMessage}/>
                 <RecipeGroceriesDisplay recipes={this.state.recipes}/>
             </div>
         );

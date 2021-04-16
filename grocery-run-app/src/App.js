@@ -1,25 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { PureComponent } from "react";
+import Header from "./Header"
+import RecipeSearch from "./RecipeSearch"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. Like this?
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends PureComponent {
+  render() {
+    return (
+        <div>
+          <Header />
+          <RecipeSearch />
+        </div>
+    )
+  }
 }
-
-export default App;

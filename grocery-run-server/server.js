@@ -71,6 +71,28 @@ function findSmittenKitchenIngredients($) {
     return recipeIngredients;
 }
 
+function findBonAppetitIngredients($) {
+    let parsedIngredients = [];
+    let ingredientList = $('.recipe__ingredient-list')[0].children;
+    ingredientList.forEach((i) => {
+        if (i.type === "tag" && i.name === "div") {
+            let ingredients = i.children;
+            let ingredientName = '';
+            for (let index = 0; index < ingredients.length; index++) {
+                if (ingredients[index].name === "p") {
+                    let amount = ingredients[index].children.length > 0 ? ingredients[index].children[0].data : '';
+                    ingredientName = amount + " ";
+                } else if (ingredients[index].name === "div") {
+                    ingredientName+=ingredients[index].children[0].data;
+                    parsedIngredients.push(ingredientName);
+                    ingredientName = '';
+                }
+            }
+        }
+    })
+    return parsedIngredients;
+}
+
 function constructRecipeIngredients(content, url) {
     let $ = cheerio.load(content);
     let ingredients = findSmittenKitchenIngredients($);
@@ -81,6 +103,12 @@ function constructRecipeIngredients(content, url) {
     if (ingredients.length === 0) {
         ingredients = findHalfBakedHarvestIngredients($);
     }
+
+    if (ingredients.length === 0) {
+        ingredients = findBonAppetitIngredients($);
+    }
+
+    //parseTheHtmlYourself()?
 
     let recipe = {};
     recipe.title = $('title')[0].children[0].data;

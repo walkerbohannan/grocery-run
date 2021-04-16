@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f46e994d-b1cb-45d3-ba47-726e2f764ade" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.Z3JvY2VyeS1ydW4tYXBwL2J1aWxk.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.Z3JvY2VyeS1ydW4tYXBwL2J1aWxk.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/grocery-run-app/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/grocery-run-app/build/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery-run-app/src/RecipeSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/grocery-run-app/src/RecipeSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery-run-server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/grocery-run-server/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +18,18 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/grocery-run-app/src/RecipeGroceriesDisplay.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/firebase.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/functions/index.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/grocery-run-app/src/RecipeSearch.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/functions/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/grocery-run-app/src/App.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/grocery-run-app/public/static/js/runtime-main.7abb9ab9.js.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/grocery-run-app/public/static/js/main.025de55a.chunk.js.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/functions/package-lock.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/grocery-run-app/public/static/js/runtime-main.7abb9ab9.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/grocery-run-app/public/static/js/2.784bd7bc.chunk.js.LICENSE.txt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/grocery-run-server/server.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/grocery-run-app/public/static/css/main.011c12dd.chunk.css" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1r7qLX5ayyPPT3EEFOHrXmXkgzt" />
   <component name="ProjectViewState">
@@ -96,7 +101,7 @@
       <workItem from="1618337420659" duration="24616000" />
       <workItem from="1618499264292" duration="1575000" />
       <workItem from="1618591644999" duration="8873000" />
-      <workItem from="1618607372385" duration="405000" />
+      <workItem from="1618607372385" duration="1033000" />
     </task>
     <servers />
   </component>

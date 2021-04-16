@@ -8,7 +8,7 @@ export default class RecipeSearch extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            proxyServer: 'https://us-central1-grocery-run-app.cloudfunctions.net/server',
+            proxyServer: 'https://us-central1-grocery-run-app.cloudfunctions.net/server/recipe',
             url: 'https://smittenkitchen.com/2020/06/whole-lemon-meringue-pie-bars/',
             recipes: [{
                 title: '',

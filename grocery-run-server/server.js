@@ -73,14 +73,20 @@ function findSmittenKitchenIngredients($) {
 
 function findBonAppetitIngredients($) {
     let parsedIngredients = [];
-    let ingredientList = $('.recipe__ingredient-list')[0].children;
+    let recipeIngredientList = $('.recipe__ingredient-list');
+
+    if (recipeIngredientList === null || recipeIngredientList.length === 0) {
+        return parsedIngredients;
+    }
+
+    let ingredientList = recipeIngredientList[0].children;
     ingredientList.forEach((i) => {
         if (i.type === "tag" && i.name === "div") {
             let ingredients = i.children;
             let ingredientName = '';
             for (let index = 0; index < ingredients.length; index++) {
                 if (ingredients[index].name === "p") {
-                    let amount = ingredients[index].children.length > 0 ? ingredients[index].children[0].data : '';
+                    let amount = ingredients[index].children.length > 0 ? ingredients[index].children[0].data.trim() : '';
                     ingredientName = amount + " ";
                 } else if (ingredients[index].name === "div") {
                     ingredientName+=ingredients[index].children[0].data;
@@ -90,6 +96,45 @@ function findBonAppetitIngredients($) {
             }
         }
     })
+    return parsedIngredients;
+}
+
+function findNyTimesIngredients($) {
+    let parsedIngredients = [];
+    let recipeIngredientsObject = $('.recipe-ingredients');
+    if (recipeIngredientsObject.length > 0) {
+        for (let i = 0; i < recipeIngredientsObject.length; i++) {
+            let children = recipeIngredientsObject[i].children;
+            for (let j = 0; j < children.length; j++) {
+                let child = children[j];
+                let parsedIngredient = '';
+                if (child.type === "tag") {
+                    for (let k = 0; k < child.children.length; k++) {
+                        if (child.children[k].type === "tag") {
+                            parsedIngredient+=child.children[k].children[0].data.trim() + " ";
+                        }
+
+                        if (k % 3 === 0) {
+                            if (parsedIngredient !== '') {
+                                parsedIngredients.push(parsedIngredient.trim());
+                            }
+                            parsedIngredient = '';
+                        }
+                    }
+                }
+            }
+        }
+    } else {
+        if (recipeIngredientsObject.children.length === 0) {
+            return parsedIngredients;
+        } else {
+            for (let i = 0; i < recipeIngredientsObject.children.length; i++) {
+                if (recipeIngredientsObject.children[i].tag === "span") {
+
+                }
+            }
+        }
+    }
     return parsedIngredients;
 }
 
@@ -108,7 +153,9 @@ function constructRecipeIngredients(content, url) {
         ingredients = findBonAppetitIngredients($);
     }
 
-    //parseTheHtmlYourself()?
+    if (ingredients.length === 0) {
+        ingredients = findNyTimesIngredients($);
+    }
 
     let recipe = {};
     recipe.title = $('title')[0].children[0].data;

@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f46e994d-b1cb-45d3-ba47-726e2f764ade" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery-run-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/grocery-run-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery-run-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/grocery-run-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery-run-app/src/parse/Parser.css" beforeDir="false" afterPath="$PROJECT_DIR$/grocery-run-app/src/parse/Parser.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery-run-app/src/parse/Parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/grocery-run-app/src/parse/Parser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery-run-server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/grocery-run-server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery-run-server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/grocery-run-server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/src/RecipeSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/grocery-run-app/src/RecipeSearch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery-run-server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/grocery-run-server/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +19,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/grocery-run-app/src/RecipeGroceriesDisplay.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/functions/index.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/grocery-run-app/src/RecipeSearch.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/grocery-run-server/server.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1r7qLX5ayyPPT3EEFOHrXmXkgzt" />
   <component name="ProjectViewState">
@@ -36,9 +43,15 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="npm.server run">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/grocery-run-app/public" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.app start">
     <configuration default="true" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/grocery-run-server/package.json" />
       <command value="run" />
@@ -55,7 +68,7 @@
       <method v="2" />
     </configuration>
     <configuration name="server run" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/grocery-run-server/package.json" />
+      <package-json value="$PROJECT_DIR$/functions/package.json" />
       <command value="run" />
       <scripts>
         <script value="start" />
@@ -65,11 +78,14 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="npm.server run" />
       <item itemvalue="npm.app start" />
+      <item itemvalue="npm.server run" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f46e994d-b1cb-45d3-ba47-726e2f764ade" name="Default Changelist" comment="" />
@@ -79,104 +95,50 @@
       <updated>1618337419565</updated>
       <workItem from="1618337420659" duration="24616000" />
       <workItem from="1618499264292" duration="1575000" />
+      <workItem from="1618591644999" duration="8873000" />
+      <workItem from="1618607372385" duration="405000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="424" y="434" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618422584262">
-      <screen x="0" y="25" width="3840" height="1501" />
-    </state>
-    <state x="424" y="434" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618422584262" />
-    <state width="1309" height="478" key="GridCell.Tab.0.bottom" timestamp="1618501137413">
-      <screen x="0" y="25" width="1920" height="1101" />
-    </state>
-    <state width="1309" height="478" key="GridCell.Tab.0.bottom/0.25.1920.1101@0.25.1920.1101" timestamp="1618501137413" />
-    <state width="1899" height="561" key="GridCell.Tab.0.bottom/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618438962601" />
-    <state width="1309" height="478" key="GridCell.Tab.0.center" timestamp="1618501137412">
-      <screen x="0" y="25" width="1920" height="1101" />
-    </state>
-    <state width="1309" height="478" key="GridCell.Tab.0.center/0.25.1920.1101@0.25.1920.1101" timestamp="1618501137412" />
-    <state width="1899" height="561" key="GridCell.Tab.0.center/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618438962600" />
-    <state width="1309" height="478" key="GridCell.Tab.0.left" timestamp="1618501137412">
-      <screen x="0" y="25" width="1920" height="1101" />
-    </state>
-    <state width="1309" height="478" key="GridCell.Tab.0.left/0.25.1920.1101@0.25.1920.1101" timestamp="1618501137412" />
-    <state width="1899" height="561" key="GridCell.Tab.0.left/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618438962600" />
-    <state width="1309" height="478" key="GridCell.Tab.0.right" timestamp="1618501137413">
-      <screen x="0" y="25" width="1920" height="1101" />
-    </state>
-    <state width="1309" height="478" key="GridCell.Tab.0.right/0.25.1920.1101@0.25.1920.1101" timestamp="1618501137413" />
-    <state width="1899" height="561" key="GridCell.Tab.0.right/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618438962601" />
-    <state width="1309" height="293" key="GridCell.Tab.1.bottom" timestamp="1618501132174">
-      <screen x="0" y="25" width="1920" height="1101" />
-    </state>
-    <state width="1309" height="293" key="GridCell.Tab.1.bottom/0.25.1920.1101@0.25.1920.1101" timestamp="1618501132174" />
-    <state width="1899" height="561" key="GridCell.Tab.1.bottom/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618438167208" />
-    <state width="1309" height="293" key="GridCell.Tab.1.center" timestamp="1618501132174">
-      <screen x="0" y="25" width="1920" height="1101" />
-    </state>
-    <state width="1309" height="293" key="GridCell.Tab.1.center/0.25.1920.1101@0.25.1920.1101" timestamp="1618501132174" />
-    <state width="1899" height="561" key="GridCell.Tab.1.center/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618438167208" />
-    <state width="1309" height="293" key="GridCell.Tab.1.left" timestamp="1618501132173">
-      <screen x="0" y="25" width="1920" height="1101" />
-    </state>
-    <state width="1309" height="293" key="GridCell.Tab.1.left/0.25.1920.1101@0.25.1920.1101" timestamp="1618501132173" />
-    <state width="1899" height="561" key="GridCell.Tab.1.left/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618438167207" />
-    <state width="1309" height="293" key="GridCell.Tab.1.right" timestamp="1618501132174">
-      <screen x="0" y="25" width="1920" height="1101" />
-    </state>
-    <state width="1309" height="293" key="GridCell.Tab.1.right/0.25.1920.1101@0.25.1920.1101" timestamp="1618501132174" />
-    <state width="1899" height="561" key="GridCell.Tab.1.right/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618438167208" />
-    <state width="1309" height="293" key="GridCell.Tab.2.bottom" timestamp="1618501132175">
-      <screen x="0" y="25" width="1920" height="1101" />
-    </state>
-    <state width="1309" height="293" key="GridCell.Tab.2.bottom/0.25.1920.1101@0.25.1920.1101" timestamp="1618501132175" />
-    <state width="1899" height="561" key="GridCell.Tab.2.bottom/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618438159780" />
-    <state width="1309" height="293" key="GridCell.Tab.2.center" timestamp="1618501132175">
-      <screen x="0" y="25" width="1920" height="1101" />
-    </state>
-    <state width="1309" height="293" key="GridCell.Tab.2.center/0.25.1920.1101@0.25.1920.1101" timestamp="1618501132175" />
-    <state width="1899" height="561" key="GridCell.Tab.2.center/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618438159777" />
-    <state width="1309" height="293" key="GridCell.Tab.2.left" timestamp="1618501132175">
-      <screen x="0" y="25" width="1920" height="1101" />
-    </state>
-    <state width="1309" height="293" key="GridCell.Tab.2.left/0.25.1920.1101@0.25.1920.1101" timestamp="1618501132175" />
-    <state width="1899" height="561" key="GridCell.Tab.2.left/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618438159776" />
-    <state width="1309" height="293" key="GridCell.Tab.2.right" timestamp="1618501132175">
-      <screen x="0" y="25" width="1920" height="1101" />
-    </state>
-    <state width="1309" height="293" key="GridCell.Tab.2.right/0.25.1920.1101@0.25.1920.1101" timestamp="1618501132175" />
-    <state width="1899" height="561" key="GridCell.Tab.2.right/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618438159778" />
-    <state width="1309" height="293" key="GridCell.Tab.3.bottom" timestamp="1618501132176">
-      <screen x="0" y="25" width="1920" height="1101" />
-    </state>
-    <state width="1309" height="293" key="GridCell.Tab.3.bottom/0.25.1920.1101@0.25.1920.1101" timestamp="1618501132176" />
-    <state width="1899" height="561" key="GridCell.Tab.3.bottom/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618438159783" />
-    <state width="1309" height="293" key="GridCell.Tab.3.center" timestamp="1618501132176">
-      <screen x="0" y="25" width="1920" height="1101" />
-    </state>
-    <state width="1309" height="293" key="GridCell.Tab.3.center/0.25.1920.1101@0.25.1920.1101" timestamp="1618501132176" />
-    <state width="1899" height="561" key="GridCell.Tab.3.center/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618438159781" />
-    <state width="1309" height="293" key="GridCell.Tab.3.left" timestamp="1618501132175">
-      <screen x="0" y="25" width="1920" height="1101" />
-    </state>
-    <state width="1309" height="293" key="GridCell.Tab.3.left/0.25.1920.1101@0.25.1920.1101" timestamp="1618501132175" />
-    <state width="1899" height="561" key="GridCell.Tab.3.left/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618438159781" />
-    <state width="1309" height="293" key="GridCell.Tab.3.right" timestamp="1618501132176">
-      <screen x="0" y="25" width="1920" height="1101" />
-    </state>
-    <state width="1309" height="293" key="GridCell.Tab.3.right/0.25.1920.1101@0.25.1920.1101" timestamp="1618501132176" />
-    <state width="1899" height="561" key="GridCell.Tab.3.right/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618438159782" />
-    <state x="766" y="693" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618429758074">
-      <screen x="0" y="25" width="3840" height="1501" />
-    </state>
-    <state x="766" y="693" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618429758074" />
-    <state x="505" y="508" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1618428286775">
-      <screen x="0" y="25" width="3840" height="1501" />
-    </state>
-    <state x="505" y="508" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.25.3840.1501/-1680.432.1680.1025@0.25.3840.1501" timestamp="1618428286775" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/grocery-run-server/server.js</url>
+          <line>111</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/grocery-run-server/server.js</url>
+          <line>116</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/functions/index.js</url>
+          <line>17</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/functions/index.js</url>
+          <line>61</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

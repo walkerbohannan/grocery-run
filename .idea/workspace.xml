@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f46e994d-b1cb-45d3-ba47-726e2f764ade" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.firebase/hosting.Z3JvY2VyeS1ydW4tYXBwL2J1aWxk.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.Z3JvY2VyeS1ydW4tYXBwL2J1aWxk.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery-run-app/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/grocery-run-app/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocery-run-app/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/grocery-run-app/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/grocery-run-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/asset-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/grocery-run-app/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/static/css/main.011c12dd.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/static/css/main.011c12dd.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/static/js/2.784bd7bc.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/static/js/2.784bd7bc.chunk.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/static/js/2.784bd7bc.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/static/js/3.1e696801.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/static/js/3.1e696801.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/static/js/main.025de55a.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/static/js/main.025de55a.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/static/js/runtime-main.7abb9ab9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/static/js/runtime-main.7abb9ab9.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocery-run-app/public/static/media/bag.2d8966b9.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/grocery-run-app/src/RecipeSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/grocery-run-app/src/RecipeSearch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,13 +35,8 @@
     <setting file="file://$PROJECT_DIR$/grocery-run-app/src/RecipeSearch.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/functions/package.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/grocery-run-app/src/App.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/grocery-run-app/public/static/js/runtime-main.7abb9ab9.js.map" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/grocery-run-app/public/static/js/main.025de55a.chunk.js.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/functions/package-lock.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/grocery-run-app/public/static/js/runtime-main.7abb9ab9.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/grocery-run-app/public/static/js/2.784bd7bc.chunk.js.LICENSE.txt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/grocery-run-server/server.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/grocery-run-app/public/static/css/main.011c12dd.chunk.css" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1r7qLX5ayyPPT3EEFOHrXmXkgzt" />
   <component name="ProjectViewState">
@@ -56,7 +63,7 @@
       <recent name="$PROJECT_DIR$/grocery-run-app/public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.app start">
+  <component name="RunManager" selected="npm.node.js server run">
     <configuration default="true" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/grocery-run-server/package.json" />
       <command value="run" />
@@ -72,8 +79,18 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="server run" type="js.build_tools.npm">
+    <configuration name="firebase server run" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/functions/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="node.js server run" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/grocery-run-server/package.json" />
       <command value="run" />
       <scripts>
         <script value="start" />
@@ -84,7 +101,8 @@
     </configuration>
     <list>
       <item itemvalue="npm.app start" />
-      <item itemvalue="npm.server run" />
+      <item itemvalue="npm.firebase server run" />
+      <item itemvalue="npm.node.js server run" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -101,12 +119,22 @@
       <workItem from="1618337420659" duration="24616000" />
       <workItem from="1618499264292" duration="1575000" />
       <workItem from="1618591644999" duration="8873000" />
-      <workItem from="1618607372385" duration="1033000" />
+      <workItem from="1618607372385" duration="2087000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
